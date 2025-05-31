@@ -1,0 +1,19 @@
+.login-content {
+    width: 100vw;
+}
+
+.popup {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.popup p {
+    margin-bottom: 0;
+}

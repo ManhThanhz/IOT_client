@@ -1,0 +1,8 @@
+.App {
+  display: flex;
+}
+.content {
+  width: 80vw;
+  height: 100%;
+  /* border: 10px solid black; */
+}

@@ -1,0 +1,53 @@
+.light-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: white; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.light-condition {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.toggle-container {
+    width: 60px;
+    height: 30px;
+    background-color: #40f464; /* Green when on */
+    border-radius: 15px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .toggle-switch {
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff; /* Light gray */
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    transition: left 0.3s ease;
+  }
+  
+  .toggle-switch.on {
+    left: 50%;
+  }
+  
+  .toggle-switch.off {
+    left: 0;
+  }
+  
+  .toggle-container.off {
+    background-color: #f44336; /* Red when off */
+  }
+  

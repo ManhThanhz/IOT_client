@@ -1,0 +1,49 @@
+.history {
+    width: 106%;
+}
+
+.historyTittle {
+    margin-bottom: 20px;
+}
+
+.MainContent {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    background-color: #5bc9e7 !important;
+}
+
+.log-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.log-item {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.log-item:hover {
+  background-color: #ddd; /* Add a hover effect */
+}
+
+.log-time, .log-activity {
+  margin: 0 10px;
+}
