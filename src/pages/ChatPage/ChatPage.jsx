@@ -180,7 +180,7 @@ const ChatPage = () => {
                 fontFamily: 'Quicksand, sans-serif',
               }}
             >
-              IUFC Chat
+              Smart Bot
             </Typography>
             
             <Tooltip
@@ -225,7 +225,7 @@ const ChatPage = () => {
             </Tooltip>
           </Box>
         </div>
-        <Box 
+        {/* <Box 
           sx={{ 
             display: 'flex', 
             flexDirection: { xs: 'column', sm: 'row' },
@@ -238,8 +238,8 @@ const ChatPage = () => {
             backgroundColor: 'rgba(254, 59, 212, 0.03)',
             border: '1px solid rgba(254, 59, 212, 0.1)',
           }}
-        >
-          <FormControl 
+        > */}
+          {/* <FormControl 
             variant="outlined" 
             size="small"
             fullWidth
@@ -247,15 +247,15 @@ const ChatPage = () => {
               minWidth: 150,
               '& .MuiOutlinedInput-root': {
                 '&.Mui-focused fieldset': {
-                  borderColor: '#fe3bd4',
+                  borderColor: '#2a47ea',
                 },
               },
               '& .MuiInputLabel-root.Mui-focused': {
-                color: '#fe3bd4',
+                color: '#2a47ea',
               }
             }}
-          >
-            <InputLabel id="meal-type-label">Meal Type</InputLabel>
+          > */}
+            {/* <InputLabel id="meal-type-label">Meal Type</InputLabel>
             <Select
               labelId="meal-type-label"
               id="meal-type"
@@ -263,7 +263,7 @@ const ChatPage = () => {
               onChange={(e) => setSelectedMealType(e.target.value)}
               label="Meal Type"
               startAdornment={
-                <RestaurantIcon sx={{ mr: 1, color: selectedMealType ? '#fe3bd4' : 'inherit' }} />
+                <RestaurantIcon sx={{ mr: 1, color: selectedMealType ? '#2a47ea' : 'inherit' }} />
               }
             >
               <MenuItem value="">
@@ -285,11 +285,11 @@ const ChatPage = () => {
               minWidth: 180,
               '& .MuiOutlinedInput-root': {
                 '&.Mui-focused fieldset': {
-                  borderColor: '#fe3bd4',
+                  borderColor: '#2a47ea',
                 },
               },
               '& .MuiInputLabel-root.Mui-focused': {
-                color: '#fe3bd4',
+                color: '#2a47ea',
               }
             }}
           >
@@ -301,7 +301,7 @@ const ChatPage = () => {
               onChange={(e) => setSelectedDietaryPreference(e.target.value)}
               label="Dietary Preference"
               startAdornment={
-                <LocalDiningIcon sx={{ mr: 1, color: selectedDietaryPreference ? '#fe3bd4' : 'inherit' }} />
+                <LocalDiningIcon sx={{ mr: 1, color: selectedDietaryPreference ? '#2a47ea' : 'inherit' }} />
               }
             >
               <MenuItem value="">
@@ -312,9 +312,9 @@ const ChatPage = () => {
                   {preference}
                 </MenuItem>
               ))}
-            </Select>
-          </FormControl>
-        </Box>
+            </Select> */}
+          {/* </FormControl> */}
+        {/* </Box> */}
         <div className="chat-box">
           {messages.length === 0 ? (
             <Box 
