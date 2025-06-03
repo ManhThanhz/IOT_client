@@ -91,20 +91,35 @@ const TempChartCard = () => {
             x: {
                 display: true,
                 title: {
-                    display: true,
-                    text: 'Time'
+                    display: false
+                },
+                ticks: {
+                    maxTicksLimit: 6,
+                    font: {
+                        size: 10
+                    }
                 }
             },
             y: {
                 type: 'linear',
                 display: true,
-                beginAtZero: false
+                beginAtZero: false,
+                ticks: {
+                    font: {
+                        size: 10
+                    }
+                }
             }
         },
         plugins: {
             legend: {
                 display: true,
-                position: 'top'
+                position: 'top',
+                labels: {
+                    font: {
+                        size: 11
+                    }
+                }
             },
             tooltip: {
                 mode: 'index',
@@ -114,62 +129,71 @@ const TempChartCard = () => {
     };
 
     return (
-        <div className="TempChart">
-            <h3>Sensor Data History</h3>
-            
-            {/* Display current (most recent) values */}
-            {currentData && (
-                <div className="current-values" style={{ marginBottom: '30px' }}>
-                    <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
-                        <div style={{ padding: '10px', backgroundColor: 'rgba(255, 99, 132, 0.1)', borderRadius: '5px' }}>
-                            <strong>Temperature:</strong> {currentData.temp.value}°{currentData.temp.unit}
+        <div className="sensor-dashboard">
+            <div className="dashboard-header">
+                <h3>Sensor Data History</h3>
+                
+                {/* Display current (most recent) values */}
+                {currentData && (
+                    <div className="current-values-grid">
+                        <div className="current-value temp-value">
+                            <span className="value-label">Temperature</span>
+                            <span className="value-number">{currentData.temp.value}°{currentData.temp.unit}</span>
                         </div>
-                        <div style={{ padding: '10px', backgroundColor: 'rgba(54, 162, 235, 0.1)', borderRadius: '5px' }}>
-                            <strong>Humidity:</strong> {currentData.humid.value}{currentData.humid.unit}
+                        <div className="current-value humid-value">
+                            <span className="value-label">Humidity</span>
+                            <span className="value-number">{currentData.humid.value}{currentData.humid.unit}</span>
                         </div>
-                        <div style={{ padding: '10px', backgroundColor: 'rgba(255, 206, 86, 0.1)', borderRadius: '5px' }}>
-                            <strong>Light:</strong> {currentData.light.value} {currentData.light.unit}
+                        <div className="current-value light-value">
+                            <span className="value-label">Light</span>
+                            <span className="value-number">{currentData.light.value} {currentData.light.unit}</span>
                         </div>
                     </div>
-                </div>
-            )}
+                )}
+            </div>
             
-            {/* Temperature Chart */}
-            <div className="Chart-Section" style={{ marginBottom: '30px' }}>
-                <h4 style={{ color: 'rgba(255, 99, 132, 1)', marginBottom: '10px' }}>Temperature</h4>
-                <div className="Chart-Content" style={{ height: '400px', width: '100%' }}>
-                    <CChart
-                        type="line"
-                        data={tempChartData}
-                        options={chartOptions}
-                        style={{ height: '400px', width: '100%' }}
-                    />
+            {/* Charts Grid */}
+            <div className="charts-grid">
+                {/* Temperature Chart */}
+                <div className="chart-container temperature-chart">
+                    <div className="chart-header">
+                        <h4>Temperature</h4>
+                    </div>
+                    <div className="chart-content">
+                        <CChart
+                            type="line"
+                            data={tempChartData}
+                            options={chartOptions}
+                        />
+                    </div>
                 </div>
-            </div>
 
-            {/* Humidity Chart */}
-            <div className="Chart-Section" style={{ marginBottom: '30px' }}>
-                <h4 style={{ color: 'rgba(54, 162, 235, 1)', marginBottom: '10px' }}>Humidity</h4>
-                <div className="Chart-Content" style={{ height: '400px', width: '100%' }}>
-                    <CChart
-                        type="line"
-                        data={humidChartData}
-                        options={chartOptions}
-                        style={{ height: '400px', width: '100%' }}
-                    />
+                {/* Humidity Chart */}
+                <div className="chart-container humidity-chart">
+                    <div className="chart-header">
+                        <h4>Humidity</h4>
+                    </div>
+                    <div className="chart-content">
+                        <CChart
+                            type="line"
+                            data={humidChartData}
+                            options={chartOptions}
+                        />
+                    </div>
                 </div>
-            </div>
 
-            {/* Light Chart */}
-            <div className="Chart-Section" style={{ marginBottom: '30px' }}>
-                <h4 style={{ color: 'rgba(255, 206, 86, 1)', marginBottom: '10px' }}>Light</h4>
-                <div className="Chart-Content" style={{ height: '400px', width: '100%' }}>
-                    <CChart
-                        type="line"
-                        data={lightChartData}
-                        options={chartOptions}
-                        style={{ height: '400px', width: '100%' }}
-                    />
+                {/* Light Chart */}
+                <div className="chart-container light-chart">
+                    <div className="chart-header">
+                        <h4>Light</h4>
+                    </div>
+                    <div className="chart-content">
+                        <CChart
+                            type="line"
+                            data={lightChartData}
+                            options={chartOptions}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

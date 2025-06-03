@@ -97,14 +97,14 @@ const Dashboard = ({ users }) => {
                             <FanCard />
                         </div>
                     </div>
-                    <div className="cards">
+                    {/* <div className="cards">
                       <SensorsCard />
-                    </div>
+                    </div> */}
                   </div>
-                  <div className="cards">
+                  <div className="temp-cards">
                     <TempChartCard />
                   </div>
-                  <div className="cards">
+                  <div className="wea-cards">
                     <ForecastWeatherCard weather={forecast} />
                   </div>
                 </div>

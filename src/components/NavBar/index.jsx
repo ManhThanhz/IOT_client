@@ -25,7 +25,7 @@ const NavBar = () => {
 
         <Link to="/History" className={getNavItemClass("/History")}>
             <CIcon className="nav-icon" icon={cilNotes} size="xxl" style={{'--ci-primary-color': 'black'}} />
-            <p>History</p>
+            <p>Chat Bot</p>
         </Link>
 
         <Link to="/Profile" className={getNavItemClass("/Profile")}>
